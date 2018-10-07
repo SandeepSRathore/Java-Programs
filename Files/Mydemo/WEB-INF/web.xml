@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : web.xml
+    Created on : 2015/9/14
+    Author     :
+    Description:
+        Purpose of the document follows.
+-->
+
+<web-app>
+	<servlet>
+		<servlet-name>NewUser</servlet-name>
+		<servlet-class>NewUser</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewUser</servlet-name>
+		<url-pattern>/newuser</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>RegisterUser</servlet-name>
+		<servlet-class>RegisterUser</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterUser</servlet-name>
+		<url-pattern>/reguser</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>Home</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ComposeServlet</servlet-name>
+		<servlet-class>ComposeServlet</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ComposeServlet</servlet-name>
+		<url-pattern>/composeservlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Forward</servlet-name>
+		<servlet-class>Forward</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Forward</servlet-name>
+		<url-pattern>/forward</url-pattern>
+	</servlet-mapping>
+</web-app>

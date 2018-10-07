@@ -1,0 +1,11 @@
+class Horse implements Animal
+{
+	public void speak()
+	{
+		System.out.pritln("Horse neigh");
+	}
+	public void move()
+	{
+		System.out.pritln("Horse run");
+	}
+}

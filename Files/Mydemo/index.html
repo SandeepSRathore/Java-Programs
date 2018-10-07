@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<script language="JavaScript">
+function validateEmail()
+{
+var x=document.forms["reguser"]["loginid"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  x="";
+  document.forms["reguser"]["loginid"].focus();
+  }
+}
+
+
+function validatePasswordLength()
+{
+	var x=document.forms["reguser"]["password"].value; 
+   if(x.length>20)
+   {
+	alert("PASSWORD is out of range");
+	x="";
+	document.forms["reguser"]["password"].focus();
+   }
+   if(x==null || x=="")
+   {
+	alert("Sorry! U must enter PASSWORD");
+	x="";
+	document.forms["reguser"]["password"].focus();
+   }	
+}
+</script>
+<noscript>
+	Your Browser Doesn't Support
+</noscript>
+</head>
+<body background="backblue.gif">
+<form name="reguser" method=post action="reguser">
+<pre>
+<font size=6px color=black>
+           LOGINID      <input type=text name="loginid" size=15 onChange="validateEmail();"/>
+	   PASSWORD     <input type=password name="password" size=15 onChange="validatePasswordLength();"/>
+
+
+            <input type=submit name="login" value=Login..></font>
+<font size=5px color=blue>
+		  <b><a href="NewUser.html">Not Registerd???..</a>   
+</font>
+</pre>
+</form>
+</body>
+</html>
+

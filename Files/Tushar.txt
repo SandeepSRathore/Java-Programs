@@ -1,0 +1,163 @@
+javascript was developed by brendan eich at netscape in 1995. javascript scripts  are  executed on client side.
+java script is used to make our webpage programmable.
+it enable us to use programming concepts like control statement, methods,arrays in web pages. with the help of js we can change manipulate html elemnts,attributes and css of elemnts etc.
+
+_____________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
+Javascript must be inserted inside <script> tag. <script> can appear in <head> or <body> tag. javascript is used to manipulate the html elements. javascript has a bunch of predefined objects.
+to change text contained in any html element we use innerHTML property of an html element. it can be used with any html object. to obtain refrence of html element we use getElementById() method of document object.
+
+javascript is a loosely typed scripting language. javascript variables are defined using var keyword. we can terminate staement with a semicolon or newline.
+
+_____________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
+Operators in JS
+	1)Arithmetic Operators +,-,*,/,%
+	2)Relational Operators <,>,<=,>=,!=,==,===,!==
+	3)Logical Operators &&,||,!
+	4)Assignment Operator =
+	5)Increment/Decrement Operators ++,--
+	6)Conditional Operator ?:
+	7)Bitwise Operators &,|,~,<<,>>
+	8)typeof operator
+_____________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
+Control Statement
+	A)Conditional Branching
+			1)if
+			2)if else
+			3)nested if else
+			4)if else if ladder
+			5)switch case default
+	B)Looping
+			1)for
+			2)while
+			3)do while
+			4)for in
+
+_____________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
+Array
+	var a=[1,2,3];
+	or 
+	var a=new Array(1,2,3);
+	*Note:Arrays are object in js. js does not support associative arrays.
+_____________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
+Functions
+	function functionname(arguements)
+	{		_______________;
+			_______________;
+			return value;
+
+	}
+	Note:function keyword is used to create a function in js.
+	Example:
+	function sum(a,b)
+	{	c=a+b;
+		return c;
+	}
+_____________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
+Inbuilt methods in js
+	(1)toString() convert an object into string equialnt.
+	(2)parseInt() converts a string into integer.
+	(3)parseFloat() converts a string into float.
+	(4)toFixed() rounds a number .
+	(5)toPrecision() converts a number into specified length.
+	(6)Math.random() returns random real number between 0 and 1.
+	(7)Math.min() returns minimum value among given numbers.
+	(8)Math.max() returns maximum value among given numbers.
+	(9)Math.round() rounds a real number into nearest integer.
+	(10)Math.ceil() rounds a real number up to nearest  integer.
+	(11)Math.floor() rounds a real number down to nearest  integer.
+	(12)Math.pow() returns a to the power b.
+	(13)Math.sqrt() returns square root.
+	(14)toLowerCase() converts a string into lower case.
+	(15)toUpperCase() converts a string into upper case.
+	(16)indexOf() returns the first occurence of a specified value in the string.
+	(17)lastIndexOf() returns the last occurance of a specified value in the string.
+	(18)charAt() returns a character from a specified index.
+	(19)concat() concatenates two strings.
+	(20)replace() replcae a value from another in the string and returns a new string.
+	(21)charCodeAt() returns ASCII value of a character from a specified index.
+	(22)substring() gives a substring.
+	(23)slice() extracts part of string.(same as substring()) works on negative index also
+	(24)substr() gives n characters from a specified index.
+	(25)search() searches occurence of value in string.
+	
+	(26)Date() we use this to generate current date,time,timezone. or create a date from given miliseconds.
+		a)var d = new Date();//current date and time
+		b)var d = new Date(milliseconds);//
+		c)var d = new Date(dateString);//creates a specific date from a string, strin format must be in "Month day,year hh:mm:ss"
+		d)var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+	(27)getTime() gives miliseconds spend after 1-1-1970
+	(28)getFullYear() returns year from a date.
+	(29)getDay() returns the week day from a date(0-6/sun-sat)
+	(30)setFullYear(year,month,day) is used to set a date.
+	(31)setDate(day) is used to set the day.
+	(32)Date.parse() returns the milliseconds between given date and 1-1-1970.
+	(33)getHours() returns hours from a date.
+	(34)getMinutes() returns minutes from a date.
+	(35)getSeconds() returns seconds from a date.
+	(36)getMilliseconds() returns milliseconds from a date.
+	(37)setHours() set the hours in a date object.
+	(38)setMinutes() sets the minutes in a date object.
+	(39)setSeconds() sets the seconds in the date object.
+	(40)toDateString(): gives only date.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________	
+variable scope in javascript
+1)global:can be accessed anywhere inside a script.
+2)local:available only inside a a function.
+
+
+<body>
+<p>A GLOBAL variable can be accessed from any script or function.</p>
+<p id="demo"></p>
+<script>
+var name = "Sandeep";//name is gloabl variable
+myFunction();
+function myFunction() 
+{
+    document.getElementById("demo").innerHTML =
+    "I can display " + name;
+}
+</script>
+</body>
+
+If we assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+This code example will declare name as a global variable, even if it is executed inside a function.
+
+<body>
+<p>
+If you assign a value to a variable that has not been declared,
+it will automatically become a GLOBAL variable:
+</p>
+<p id="demo"></p>
+<script>
+myFunction();
+document.getElementById("demo").innerHTML =
+"I can display " + name;
+
+function myFunction()
+ {
+    name = "Tarun";
+}
+</script>
+</body>		
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+JavaScript PopUp Boxes
+We have three type of popups in javascript
+
+1)alert:An alert box is used if we want to make sure information comes through to the user. When an alert box pops up, the user will have to click "OK" to proceed.
+
+2)confirm : A confirm box is used if we want the user to verify or accept something. When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+
+3)prompt:	A prompt box is used if we want the user to input a value before entering a page. When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value. If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+
+Syntax:
+1.alert('message') or window.alert('message')
+2.confirm('message') or window.confirm('message')
+3.prompt('message') or window.prompt('message')

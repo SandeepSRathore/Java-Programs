@@ -1,0 +1,13 @@
+import java.io.*;
+class Book implements Item
+{
+	String title,auther,publication;
+	Console con=System.console();
+	System.out.println("Enter the title of book");
+	title=con.readLine();
+	System.out.println("Enter the auther name");
+	auther=con.readLine();
+	System.out.println("Enter the Publication");
+	publication=con.readLine();
+
+}
